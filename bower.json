@@ -26,7 +26,7 @@
   "devDependencies": {
     "jquery": "^2.2.3",
     "bootstrap": "^3.3.6",
-    "font-awesome": "fontawesome#^4.6.1",
+    "font-awesome": "fontawesome#^4.7.0",
     "fastclick": "^1.0.6",
     "nprogress": "^0.2.0",
     "Chart.js": "^2.0.2",
