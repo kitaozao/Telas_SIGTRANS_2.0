@@ -12,15 +12,7 @@ var CURRENT_URL = window.location.href.split('?')[0],
     $LEFT_COL = $('.left_col'),
     $RIGHT_COL = $('.right_col'),
     $NAV_MENU = $('.nav_menu'),
-    $FOOTER = $('footer'),
-    map;
-
-function initMap(){
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -24.9554503, lng: -53.4552361},
-        zoom: 13
-    });
-};
+    $FOOTER = $('footer');
 
 // Sidebar
 $(document).ready(function() {
