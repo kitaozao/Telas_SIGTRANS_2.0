@@ -107,11 +107,11 @@
         <div class="right_col" role="main">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-
+                    <!-- table -->
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Ocorrencias abertas</h2>
+                                <h2>Ocorrências abertas</h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -130,50 +130,84 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
-                                    <thead>
-                                    <tr>
-                                        <th>Data</th>
-                                        <th>Rua</th>
-                                        <th>Numero</th>
-                                        <th>Cruzamento</th>
-                                        <th>Bairro</th>
-                                        <th>Referência</th>
-                                        <th>Latitude</th>
-                                        <th>Longitude</th>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-box table-responsive">
+                                            <p class="text-muted font-13 m-b-30">
+                                            </p>
 
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th>1/10/2016</th>
-                                        <th>Castro Alves</th>
-                                        <th>2011</th>
-                                        <th>Av. Brasil</th>
-                                        <th>Centro</th>
-                                        <th>Proximo á loja MM</th>
-                                        <th>-24.9558266</th>
-                                        <th>-53.4617911</th>
+                                            <table id="datatable-keytable" class="table table-striped table-bordered">
+                                                <thead>
+                                                <tr>
+                                                    <th>Data</th>
+                                                    <th>Rua</th>
+                                                    <th>Numero/KM</th>
+                                                    <th>Cruzamento com</th>
+                                                    <th>Bairro</th>
+                                                    <th>Referência</th>
+                                                    <th>Latitude</th>
+                                                    <th>Longitude</th>
+                                                    <th>Editar</th>
+                                                </tr>
+                                                </thead>
 
-                                    </tr>
-                                    <tr>
-                                        <th>2/10/2016</th>
-                                        <th>Aloísio de azevedo</th>
-                                        <th>765</th>
-                                        <th>-</th>
-                                        <th>Santo Onofre</th>
-                                        <th>-</th>
-                                        <th>-24.96052</th>
-                                        <th>-53.4867739</th>
 
-                                    </tr>
-                                    </tbody>
+                                                <tbody>
+                                                <tr>
+                                                    <th>1/10/2016</th>
+                                                    <th>Castro Alves</th>
+                                                    <th>2011</th>
+                                                    <th>Av. Brasil</th>
+                                                    <th>Centro</th>
+                                                    <th>Proximo á loja MM</th>
+                                                    <th>-24.9558266</th>
+                                                    <th>-53.4617911</th>
+                                                    <th><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+                                                    </th>
 
-                                </table>
+                                                </tr>
+                                                <tr>
+                                                    <th>2/10/2016</th>
+                                                    <th>Aloísio de azevedo</th>
+                                                    <th>765</th>
+                                                    <th>-</th>
+                                                    <th>Santo Onofre</th>
+                                                    <th>-</th>
+                                                    <th>-24.96052</th>
+                                                    <th>-53.4867739</th>
+                                                    <th>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+                                                    </th>
+                                                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog modal-lg">
+                                                            <div class="modal-content">
 
+                                                                <div class="modal-header">
+                                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">x</span>
+                                                                    </button>
+                                                                    <h4 class="modal-title" id="myModalLabel">Editar Ocorrência</h4>
+                                                                </div>
+                                                                <div class="modal-body">
+
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                                    <button type="button" class="btn btn-primary">Salvar Alterações</button>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!--/table -->
                 </div>
             </div>
         </div>
@@ -224,13 +258,91 @@
 <!-- bootstrap-daterangepicker -->
 <script src="js/moment/moment.min.js"></script>
 <script src="js/datepicker/daterangepicker.js"></script>
-
+<!-- Datatables -->
+<script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="../vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+<script src="../vendors/jszip/dist/jszip.min.js"></script>
+<script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
 
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLjQDEPz7qYcfTrevxLBT0ko25vBJbu20&callback=initMap">
 </script>
+<script>
+    $(document).ready(function() {
+        var handleDataTableButtons = function() {
+            if ($("#datatable-buttons").length) {
+                $("#datatable-buttons").DataTable({
+                    dom: "Bfrtip",
+                    buttons: [
+                        {
+                            extend: "copy",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "csv",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "excel",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "pdfHtml5",
+                            className: "btn-sm"
+                        },
+                        {
+                            extend: "print",
+                            className: "btn-sm"
+                        },
+                    ],
+                    responsive: true
+                });
+            }
+        };
 
+        TableManageButtons = function() {
+            "use strict";
+            return {
+                init: function() {
+                    handleDataTableButtons();
+                }
+            };
+        }();
+
+        $('#datatable').dataTable();
+        $('#datatable-keytable').DataTable({
+            keys: true
+        });
+
+        $('#datatable-responsive').DataTable();
+
+        $('#datatable-scroller').DataTable({
+            ajax: "js/datatables/json/scroller-demo.json",
+            deferRender: true,
+            scrollY: 380,
+            scrollCollapse: true,
+            scroller: true
+        });
+
+        var table = $('#datatable-fixed-header').DataTable({
+            fixedHeader: true
+        });
+
+        TableManageButtons.init();
+    });
+</script>
 </body>
 </html>
