@@ -178,6 +178,7 @@
                                                     <th>
                                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
                                                     </th>
+                                                    <!--div do modal-->
                                                     <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
                                                         <div class="modal-dialog modal-lg">
                                                             <div class="modal-content">
@@ -188,7 +189,191 @@
                                                                     <h4 class="modal-title" id="myModalLabel">Editar Ocorrência</h4>
                                                                 </div>
                                                                 <div class="modal-body">
+                                                                    <!--corpo do modal-->
+                                                                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                                                        <h4>Geral</h4>
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-xs-12" for="date">Data <span class="required">*</span>
+                                                                            </label>
+                                                                            <div class="col-xs-12">
+                                                                                <input type="date" id="date" required="required" class="form-control col-xs-12">
+                                                                            </div>
+                                                                        </div>
 
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-xs-12" for="street">Rua <span class="required">*</span>
+                                                                            </label>
+                                                                            <div class="col-xs-12">
+                                                                                <input type="text" id="street" required="required" class="form-control col-xs-12">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-xs-12" for="number">Numero <span class="required">*</span>
+                                                                            </label>
+                                                                            <div class="col-xs-12">
+                                                                                <input type="number" id="number"  required="required" class="form-control col-xs-12">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-xs-12" for="cross">Cruzamento
+                                                                            </label>
+                                                                            <div class="col-xs-12">
+                                                                                <input type="text" id="cross" class="form-control col-xs-12">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-xs-12" for="Lat">Latitude <span class="required">*</span>
+                                                                            </label>
+                                                                            <div class="col-xs-12">
+                                                                                <input type="number" id="Lat"  required="required" class="form-control col-xs-12">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label class="control-label col-xs-12" for="Long">Longitude <span class="required">*</span>
+                                                                            </label>
+                                                                            <div class="col-xs-12">
+                                                                                <input type="number" id="Long"  required="required" class="form-control col-xs-12">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label for="middle-name" class="control-label col-xs-12">Middle Name / Initial</label>
+                                                                            <div class="col-xs-12">
+                                                                                <input id="middle-name" class="form-control col-xs-12" type="text" name="middle-name">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h4>Dados estatísticos</h4>
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="tipoAcidente">Tipo de Acidente</label>
+                                                                            <select name="tipoAcidente" id="tipoAcidente" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="tipoPavimento">Tipo de Pavimento</label>
+                                                                            <select name="tipoPavimento" id="tipoPavimento" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="surface">Superficie</label>
+                                                                            <select name="surface" id="surface" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="accidentClassification">Classificação do acidente</label>
+                                                                            <select name="accidentClassification" id="accidentClassification" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="roadState">Estado da pista</label>
+                                                                            <select name="roadState" id="roadState" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="roadProfile">Perfil da pista</label>
+                                                                            <select name="roadProfile" id="roadProfile" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="roadCondition">Condição da pista</label>
+                                                                            <select name="roadCondition" id="roadCondition" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="climaticCondition">Condição climática</label>
+                                                                            <select name="climaticCondition" id="climaticCondition" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="verticalSinalization">Sinalização vertical</label>
+                                                                            <select name="verticalSinalization" id="verticalSinalization" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="horizontalSinalization">Sinalização horizontal</label>
+                                                                            <select name="horizontalSinalization" id="horizontalSinalization" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="direction">Direção</label>
+                                                                            <select name="direction" id="direction" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+
+                                                                        <div class="form-group col-xs-12">
+                                                                            <label for="zone">Zona</label>
+                                                                            <select name="zone" id="zone" class="form-control control-label" >
+                                                                                <option value="">Escolha uma opção</option>
+                                                                                <option value="opt1">Opção 1</option>
+                                                                                <option value="opt2">Opção 2</option>
+                                                                                <option value="optn">...</option>
+                                                                            </select>
+                                                                        </div>
+
+
+
+
+
+                                                                    </form>
+                                                                    <!--/corpo do modal-->
                                                                 </div>
                                                                 <div class="modal-footer">
                                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -198,6 +383,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <!--/div do modal-->
                                                 </tr>
                                                 </tbody>
                                             </table>
