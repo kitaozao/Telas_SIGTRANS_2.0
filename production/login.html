@@ -1,44 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-     <title>Sigtrans</title>
+    <title>Sigtrans</title>
 
-    <link href="../build/css/mapscss.css" rel="stylesheet">
+      <link href="../production/css/animate.css">
+      <link href="../build/css/mapscss.css" rel="stylesheet">
+      <!-- Bootstrap -->
+      <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="https://colorlib.com/polygon/gentelella/css/animate.min.css" rel="stylesheet">
+      <link href="../production/css/animate.css" rel="stylesheet">
 
-    <script src="../vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="../src/js/map.js" type="text/javascript"></script>
-
-    <div class="container">
-      <form>
-          <div class="col-xs-2">
-            <img src="images/Icons/sigtrans2.jpg" class="img-rounded" width=100% >
-          </div>
-          <div class="col-xs-2">
-            <input id="user" type="text" id="Username" class="form-control" >
-          </div>
-          <div class="col-xs-2">
-            <input id="password" type="password" id="Password" class="form-control" >
-          </div>
-          <div class="col-xs-2">
-            <button id="Login_button" type="button" class="btn btn-primary">Login</button>
-          </div>
-        </div>
-      </form>
-    </div>
-
+      <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
   <body>
-    <div id="map"></div>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv-4qjpzMKGz85PCxD_H9QhjOOcZ96IpE&signed_in=true&callback=initMap">
-    </script>
+      <div id="barra">
+          <nav class="navbar" role="navigation">
+              <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a  class="navbar-brand" href="#"><img src="../production/images/Icons/sigtrans2.png" height="150%"></a>
+                  </div>
+
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                              <ul id="login-dp" class="dropdown-menu">
+                                  <li>
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                  <div class="form-group">
+                                                      <label class="sr-only" for="InputEmail2">Email address</label>
+                                                      <input type="email" class="form-control" id="InputEmail2" placeholder="Email" required>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="sr-only" for="InputPassword2">Password</label>
+                                                      <input type="password" class="form-control" id="InputPassword2" placeholder="Senha" required>
+                                                      <div class="help-block text-right"><a href="">Esqueceu a senha?</a></div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                                  </div>
+                                                  <div class="checkbox">
+                                                      <label>
+                                                          <input type="checkbox"> Manter logado
+                                                      </label>
+                                                  </div>
+                                              </form>
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+          </nav>
+
+
+       <div id="map"></div>
+      </div>
+      <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv-4qjpzMKGz85PCxD_H9QhjOOcZ96IpE&callback=loginMap">
+      </script>
+
+      <script src="../vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
+      <script src="../src/js/loginMap.js" type="text/javascript"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+
   </body>
 </html>
+

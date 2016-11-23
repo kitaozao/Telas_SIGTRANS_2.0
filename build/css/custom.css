@@ -4308,6 +4308,9 @@ ul.notifications {
   width: 100%;
   height: 90vh; }
 
+.map-login {
+  height: 90vh; }
+
 #goCenterUI, #toggleHmUI {
   background-color: #fff;
   border: 2px solid #fff;
@@ -4330,3 +4333,5 @@ ul.notifications {
   margin-left: 12px; }
 
 /** /Map **/
+/** Login **/
+/** Login **/

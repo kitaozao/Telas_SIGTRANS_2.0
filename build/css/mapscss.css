@@ -1,12 +1,35 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body{
+    background:white;
 }
-#map {
-    height: 95%;
+#barra{
+    height: 4vh;
 }
-#head{
-    height: 5%;
+#map{
+    height: 95vh;
 }
+.navbar{
+    margin-bottom: 0px !important;
+    background-color: #EDEDED; !important;
+    border-color: #D9DEE4 !important;
+}
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+
+
 
