@@ -23,106 +23,110 @@
   <link href="../build/css/custom.min.css" rel="stylesheet">
 </head>
 
-<body class="nav-md menu_fixed" >
+<body class="nav-md" >
 <div class="container body">
   <div class="main_container">
-    <div class="col-md-3 left_col">
-      <div class="left_col scroll-view">
-        <div class="navbar nav_title" style="border: 0;">
-          <a href="index.html" class="site_title"><i class="fa fa-road"></i> <span>Sigtrans</span></a>
-        </div>
+	<div class="col-md-3 left_col menu_fixed">
+	  <div class="left_col scroll-view">
+		<div class="navbar nav_title" style="border: 0;">
+		  <a href="index.html" class="site_title"><i class="fa fa-road"></i> <span>Sigtrans</span></a>
+		</div>
 
-        <div class="clearfix"></div>
+		<div class="clearfix"></div>
 
-        <!-- sidebar menu -->
-        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-          <div class="menu_section">
-            <!--<h3>General</h3>-->
-            <ul class="nav side-menu">
+		<!-- sidebar menu -->
+		<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+		  <div class="menu_section">
+			<!--<h3>General</h3>-->
+			<ul class="nav side-menu">
 
-              <li><a><i class="fa fa-folder"></i> Ocorrências <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                  <li><a href="ocorrencias.html">Abertas</a></li>
-                  <li><a href="ocorrencias.html">Geral</a></li>
-                </ul>
-              </li>
+			  <li><a><i class="fa fa-folder"></i> Ocorrências <span class="fa fa-chevron-down"></span></a>
+				<ul class="nav child_menu">
+				  <li><a href="ocorrencias.html">Abertas</a></li>
+				  <li><a href="ocorrencias.html">Geral</a></li>
+				</ul>
+			  </li>
 
-              <li><a><i class="fa fa-plus-square"></i> Obitos <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                  <li><a href="#">Analises Completas</a></li>
-                  <li><a href="#">Analises Incompletas</a></li>
-                </ul>
-              </li>
+			  <li><a><i class="fa fa-plus-square"></i> Obitos <span class="fa fa-chevron-down"></span></a>
+				<ul class="nav child_menu">
+				  <li><a href="#">Analises Completas</a></li>
+				  <li><a href="#">Analises Incompletas</a></li>
+				</ul>
+			  </li>
 
-              <li><a href="#"><i class="fa fa-bar-chart-o"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
-                <ul class="nav child_menu">
-                  <li><a href="relatorios.html">Estatísticos</a></li>
-                  <li><a href="relatorios.html">Gerenciais</a></li>
-                </ul>
-              </li>
+			  <li><a href="#"><i class="fa fa-bar-chart-o"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
+				<ul class="nav child_menu">
+				  <li><a href="relatorios.html">Estatísticos</a></li>
+				  <li><a href="relatorios.html">Gerenciais</a></li>
+				</ul>
+			  </li>
 
-            </ul>
-          </div>
+			</ul>
+		  </div>
 
-        </div>
+		</div>
+		<!-- /sidebar menu  -->
+		<!-- /menu footer buttons -->
+		<div class="sidebar-footer hidden-small"></div>
+		<!-- /menu footer buttons -->
 
-      </div>
+	  </div>
+	</div>
+
+	<!-- top navigation -->
+	<div class="top_nav">
+	  <div class="nav_menu">
+		<nav class="" role="navigation">
+
+		  <div class="nav toggle">
+			<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+		  </div>
+
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="">
+			  <a href="javascript:;" class="user-profile dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+				<!--<img src="images/img.jpg" alt="">John Doe-->
+				<i class="fa fa-user-circle-o">  Nome do Usuário </i>
+				<span class=" fa fa-angle-down"></span>
+			  </a>
+			  <ul class="dropdown-menu dropdown-usermenu pull-right">
+				<li><a href="javascript:;"> Perfil</a></li>
+				<li>
+				  <a href="javascript:;">
+					<!--<span class="badge bg-red pull-right">50%</span>-->
+					<span>Opções</span>
+				  </a>
+				</li>
+				<li><a href="javascript:;">Ajuda</a></li>
+				<li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
+			  </ul>
+			</li>
+		  </ul>
+		</nav>
+	  </div>
     </div>
+	<!-- /top navigation -->
+	<br />
+	<!-- page content -->
+	<div class="right_col" role="main">
+	  <div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+		  <div class="map-principal" id="map">
 
-    <!-- top navigation -->
-    <div class="top_nav">
-      <div class="nav_menu">
-        <nav class="" role="navigation">
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- /page content -->
 
-          <div class="nav toggle">
-            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-          </div>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li class="">
-              <a href="javascript:;" class="user-profile dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
-                <!--<img src="images/img.jpg" alt="">John Doe-->
-                <i class="fa fa-user-circle-o">  Nome do Usuário </i>
-                <span class=" fa fa-angle-down"></span>
-              </a>
-              <ul class="dropdown-menu dropdown-usermenu pull-right">
-                <li><a href="javascript:;"> Perfil</a></li>
-                <li>
-                  <a href="javascript:;">
-                    <!--<span class="badge bg-red pull-right">50%</span>-->
-                    <span>Opções</span>
-                  </a>
-                </li>
-                <li><a href="javascript:;">Ajuda</a></li>
-                <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <!-- /top navigation -->
-    <br />
-    <!-- page content -->
-    <div class="right_col" role="main">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="map-principal" id="map">
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /page content -->
-
-    <!-- footer content -->
-    <footer>
-      <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-      </div>
-      <div class="clearfix"></div>
-    </footer>
-    <!-- /footer content -->
+	<!-- footer content -->
+	<footer>
+	  <div class="pull-right">
+		2016 Universidade Estadual do Oeste do Paraná - UNIOESTE
+	  </div>
+	  <div class="clearfix"></div>
+	</footer>
+	<!-- /footer content -->
   </div>
 </div>
 
@@ -165,7 +169,7 @@
 <script src="../build/js/custom.min.js"></script>
 
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLjQDEPz7qYcfTrevxLBT0ko25vBJbu20&libraries=visualization&callback=initMap">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLjQDEPz7qYcfTrevxLBT0ko25vBJbu20&libraries=visualization&callback=initMap">
 </script>
 
 </body>
