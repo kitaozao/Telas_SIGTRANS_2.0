@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Sigtrans</title>
+	<!-- Bootstrap -->
+	<link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- iCheck -->
+	<link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+	<!-- bootstrap-progressbar -->
+	<link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+	<!-- jVectorMap -->
+	<link href="css/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+	<!-- Custom Theme Style -->
+	<link href="../build/css/custom.min.css" rel="stylesheet">
+
+</head>
+
+<body class="nav-md" >
+<div class="container body">
+	<div class="main_container">
+		<div class="col-md-3 left_col menu_fixed">
+			<div class="left_col scroll-view">
+				<div class="navbar nav_title" style="border: 0;">
+					<a href="index.html" class="site_title"><i class="fa fa-road"></i> <span>Sigtrans</span></a>
+				</div>
+
+				<div class="clearfix"></div>
+
+				<!-- sidebar menu -->
+				<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+					<div class="menu_section">
+						<!--<h3>General</h3>-->
+						<ul class="nav side-menu">
+
+							<li><a><i class="fa fa-folder"></i> Ocorrências <span class="fa fa-chevron-down"></span></a>
+								<ul class="nav child_menu">
+									<li><a href="ocorrencias.html">Abertas</a></li>
+									<li><a href="ocorrencias.html">Geral</a></li>
+								</ul>
+							</li>
+
+							<li><a><i class="fa fa-plus-square"></i> Obitos <span class="fa fa-chevron-down"></span></a>
+								<ul class="nav child_menu">
+									<li><a href="obitos.html">Analises Completas</a></li>
+									<li><a href="obitos.html">Analises Incompletas</a></li>
+								</ul>
+							</li>
+
+							<li><a href="#"><i class="fa fa-bar-chart-o"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
+								<ul class="nav child_menu">
+									<li><a href="relatorios.html">Estatísticos</a></li>
+									<li><a href="relatorios.html">Gerenciais</a></li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+				<!-- /sidebar menu  -->
+
+				<!-- /menu footer buttons -->
+				<div class="sidebar-footer hidden-small"></div>
+				<!-- /menu footer buttons -->
+
+			</div>
+		</div>
+
+		<!-- top navigation -->
+		<div class="top_nav">
+			<div class="nav_menu">
+				<nav class="" role="navigation">
+
+					<div class="nav toggle">
+						<a id="menu_toggle"><i class="fa fa-bars"></i></a>
+					</div>
+
+					<ul class="nav navbar-nav navbar-right">
+						<li class="">
+							<a href="javascript:;" class="user-profile dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+								<!--<img src="images/img.jpg" alt="">John Doe-->
+								<i class="fa fa-user-circle-o">  Nome do Usuário </i>
+								<span class=" fa fa-angle-down"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-usermenu pull-right">
+								<li><a href="javascript:;"> Perfil</a></li>
+								<li>
+									<a href="javascript:;">
+										<!--<span class="badge bg-red pull-right">50%</span>-->
+										<span>Opções</span>
+									</a>
+								</li>
+								<li><a href="javascript:;">Ajuda</a></li>
+								<li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Sair</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- /top navigation -->
+		<br />
+
+		<!-- page content -->
+		<div class="right_col" role="main">
+
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="x_panel">
+						<div class="x_title">
+                            <h2>Relatório</h2>
+							<ul class="nav navbar-right panel_toolbox">
+								<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#">Settings 1</a>
+										</li>
+										<li><a href="#">Settings 2</a>
+										</li>
+									</ul>
+								</li>
+								<!--<li><a class="close-link"><i class="fa fa-close"></i></a>-->
+								<!--</li>-->
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+						<div class="x_content">
+                            <div id="echart_donut" style="height:40vh;"></div>
+                            <p class="pull-right">Data Inicial/Final: dd/mm/aaaa - dd/mm/aaaa</p>
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">Campo</th>
+                                    <th class="text-center">Quantidade</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Automóvel</td>
+                                    <td>190</td>
+                                </tr>
+                                <tr>
+                                    <td>Motocicleta</td>
+                                    <td>155</td>
+                                </tr>
+                                <tr>
+                                    <td>Bicicleta</td>
+                                    <td>28</td>
+                                </tr>
+                                <tr>
+                                    <td>Caminhão</td>
+                                    <td>14</td>
+                                </tr>
+                                <tr>
+                                    <td>Caminhonete</td>
+                                    <td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>Motoneta</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>Carreta</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Camioneta</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Ciclomotor</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Reboque ou semi-reboque</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Não informado</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Ambulância</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Tração animal</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>422</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- /page content -->
+
+		<!-- footer content -->
+		<footer>
+			<div class="pull-right">
+				2016 Universidade Estadual do Oeste do Paraná - UNIOESTE
+			</div>
+			<div class="clearfix"></div>
+		</footer>
+		<!-- /footer content -->
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- Chart.js -->
+<!--<script src="../vendors/Chart.js/dist/Chart.min.js"></script>-->
+<!-- gauge.js -->
+<script src="../vendors/bernii/gauge.js/dist/gauge.min.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="../vendors/iCheck/icheck.min.js"></script>
+<!-- Skycons -->
+<script src="../vendors/skycons/skycons.js"></script>
+<!-- ECharts -->
+<script src="../vendors/echarts/dist/echarts.min.js"></script>
+<script src="../vendors/echarts/map/js/world.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- jquery.inputmask -->
+<script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+
+<!-- morris.js -->
+<script>
+    var theme = {
+        color: [
+            '#26B99A', '#34495E', '#BDC3C7', '#3498DB',
+            '#9B59B6', '#8abb6f', '#759c6a', '#bfd3b7'
+        ],
+
+        title: {
+            itemGap: 8,
+            textStyle: {
+                fontWeight: 'normal',
+                color: '#408829'
+            }
+        },
+
+        dataRange: {
+            color: ['#1f610a', '#97b58d']
+        },
+
+        toolbox: {
+            color: ['#408829', '#408829', '#408829', '#408829']
+        },
+
+        tooltip: {
+            backgroundColor: 'rgba(0,0,0,0.5)',
+            axisPointer: {
+                type: 'line',
+                lineStyle: {
+                    color: '#408829',
+                    type: 'dashed'
+                },
+                crossStyle: {
+                    color: '#408829'
+                },
+                shadowStyle: {
+                    color: 'rgba(200,200,200,0.3)'
+                }
+            }
+        },
+
+        dataZoom: {
+            dataBackgroundColor: '#eee',
+            fillerColor: 'rgba(64,136,41,0.2)',
+            handleColor: '#408829'
+        },
+        grid: {
+            borderWidth: 0
+        },
+
+        categoryAxis: {
+            axisLine: {
+                lineStyle: {
+                    color: '#408829'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: ['#eee']
+                }
+            }
+        },
+
+        valueAxis: {
+            axisLine: {
+                lineStyle: {
+                    color: '#408829'
+                }
+            },
+            splitArea: {
+                show: true,
+                areaStyle: {
+                    color: ['rgba(250,250,250,0.1)', 'rgba(200,200,200,0.1)']
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: ['#eee']
+                }
+            }
+        },
+        timeline: {
+            lineStyle: {
+                color: '#408829'
+            },
+            controlStyle: {
+                normal: {color: '#408829'},
+                emphasis: {color: '#408829'}
+            }
+        },
+
+        k: {
+            itemStyle: {
+                normal: {
+                    color: '#68a54a',
+                    color0: '#a9cba2',
+                    lineStyle: {
+                        width: 1,
+                        color: '#408829',
+                        color0: '#86b379'
+                    }
+                }
+            }
+        },
+        map: {
+            itemStyle: {
+                normal: {
+                    areaStyle: {
+                        color: '#ddd'
+                    },
+                    label: {
+                        textStyle: {
+                            color: '#c12e34'
+                        }
+                    }
+                },
+                emphasis: {
+                    areaStyle: {
+                        color: '#99d2dd'
+                    },
+                    label: {
+                        textStyle: {
+                            color: '#c12e34'
+                        }
+                    }
+                }
+            }
+        },
+        force: {
+            itemStyle: {
+                normal: {
+                    linkStyle: {
+                        strokeColor: '#408829'
+                    }
+                }
+            }
+        },
+        chord: {
+            padding: 4,
+            itemStyle: {
+                normal: {
+                    lineStyle: {
+                        width: 1,
+                        color: 'rgba(128, 128, 128, 0.5)'
+                    },
+                    chordStyle: {
+                        lineStyle: {
+                            width: 1,
+                            color: 'rgba(128, 128, 128, 0.5)'
+                        }
+                    }
+                },
+                emphasis: {
+                    lineStyle: {
+                        width: 1,
+                        color: 'rgba(128, 128, 128, 0.5)'
+                    },
+                    chordStyle: {
+                        lineStyle: {
+                            width: 1,
+                            color: 'rgba(128, 128, 128, 0.5)'
+                        }
+                    }
+                }
+            }
+        },
+        gauge: {
+            startAngle: 225,
+            endAngle: -45,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: [[0.2, '#86b379'], [0.8, '#68a54a'], [1, '#408829']],
+                    width: 8
+                }
+            },
+            axisTick: {
+                splitNumber: 10,
+                length: 12,
+                lineStyle: {
+                    color: 'auto'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    color: 'auto'
+                }
+            },
+            splitLine: {
+                length: 18,
+                lineStyle: {
+                    color: 'auto'
+                }
+            },
+            pointer: {
+                length: '90%',
+                color: 'auto'
+            },
+            title: {
+                textStyle: {
+                    color: '#333'
+                }
+            },
+            detail: {
+                textStyle: {
+                    color: 'auto'
+                }
+            }
+        },
+        textStyle: {
+            fontFamily: 'Arial, Verdana, sans-serif'
+        }
+    };
+
+    var echartDonut = echarts.init(document.getElementById('echart_donut'), theme);
+
+    echartDonut.setOption({
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        calculable: true,
+        legend: {
+            x: 'right',
+            y: 'center',
+            orient: 'vertical',
+            data: [ 'Automóvel',
+                    'Motocicleta',
+                    'Bicicleta',
+                    'Caminhão',
+                    'Caminhonete',
+                    'Motoneta',
+                    'Carreta',
+                    'Outros'
+//                    'Camioneta',
+//                    'Ciclomotor',
+//                    'Reboque ou semi-reboque',
+//                    'Não informado',
+//                    'Ambulância',
+//                    'Tração animal'
+            ]
+        },
+        toolbox: {
+            show: true,
+            x: 'left',
+            feature: {
+                magicType: {
+                    show: true,
+                    type: ['pie', 'funnel'],
+                    option: {
+                        funnel: {
+                            x: '25%',
+                            width: '50%',
+                            funnelAlign: 'center',
+                            max: 1548
+                        }
+                    }
+                },
+                restore: {
+                    show: true,
+                    title: "Restore"
+                },
+                saveAsImage: {
+                    show: true,
+                    title: "Save Image"
+                }
+            }
+        },
+        series: [{
+            name: 'Acidentes por tipo',
+            type: 'pie',
+            radius: ['35%', '55%'],
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true
+                    },
+                    labelLine: {
+                        show: true
+                    }
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        position: 'center',
+                        textStyle: {
+                            fontSize: '14',
+                            fontWeight: 'normal'
+                        }
+                    }
+                }
+            },
+            minAngle: 5,
+//            roseType: 'area',
+            data: [{
+                value: 190,
+                name: 'Automóvel'
+            }, {
+                value: 155,
+                name: 'Motocicleta'
+            }, {
+                value: 28,
+                name: 'Bicicleta'
+            }, {
+                value: 14,
+                name: 'Caminhão'
+            }, {
+                value: 12,
+                name: 'Caminhonete'
+            }, {
+                value: 9,
+                name: 'Motoneta'
+            }, {
+                value: 5,
+                name: 'Carreta'
+            }, {
+                value: 9,
+                name: 'Outros'
+            }]
+//              {
+//                value: 2,
+//                name: 'Ciclomotor'
+//            }, {
+//                value: 1,
+//                name: 'Reboque ou semi-reboque'
+//            },{
+//                value: 1,
+//                name: 'Ambulância'
+//            },{
+//                value: 1,
+//                name: 'Tração animal'
+//            },{
+//                value: 1,
+//                name: 'Não informado'
+//            }]
+        }]
+});
+</script>
+<!-- /morris.js -->
+
+</body>
+</html>
