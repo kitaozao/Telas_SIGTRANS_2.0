@@ -180,567 +180,503 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <!--corpo do modal-->
-                                                                <form>
-                                                                    <div class="container">
-                                                                        <!-- Info Geral da ocorrência -->
-                                                                        <div class="row">
-                                                                            <h1>Dados gerais</h1>
-                                                                            <div class="form-group col-md-4">
-                                                                                <label for="ano" >Ano de referência</label >
-                                                                                <input type="number"
-                                                                                       class="form-control"
-                                                                                       id="ano"
-                                                                                       >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4">
-                                                                                <label for="data" >Data da ocorrência</label >
-                                                                                <input type="date"
-                                                                                       class="form-control"
-                                                                                       id="data">
-                                                                            </div >
-                                                                            <div class="form-group col-md-4">
-                                                                                <label for="hora" >Horário</label >
-                                                                                <input type="time"
-                                                                                       class="form-control"
-                                                                                       id="hora">
-                                                                            </div >
-                                                                            <div class="form-group col-md-12">
-                                                                                <label for="endereco" >Endereço</label >
-                                                                                <input type="text"
-                                                                                       class="form-control"
-                                                                                       id="endereco">
-                                                                            </div >
-                                                                            <div class="form-group col-md-3" >
-                                                                                <label for="zona" >Trecho (zona)</label >
-                                                                                <select name="zona"
-                                                                                        id="zona"
-                                                                                        class="form-control">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value="rural" >Rural</option >
-                                                                                    <option value="urbana" >Urbana</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-9">
-                                                                                <label for="vitima" >Nome da vítima</label >
-                                                                                <input type="text"
-                                                                                       class="form-control"
-                                                                                       id="vitima"
-                                                                                       ng-model="geral.vitima">
-                                                                            </div >
-                                                                            <div class="form-group col-md-3">
-                                                                                <label for="idade" >Idade da vítima</label >
-                                                                                <input type="text"
-                                                                                       class="form-control"
-                                                                                       id="idade"
-                                                                                       ng-model="geral.idade">
-                                                                            </div >
-                                                                            <div class="form-group col-md-3" >
-                                                                                <label for="sexo" >Sexo da vítima</label >
-                                                                                <select name="sexo"
-                                                                                        id="sexo"
-                                                                                        class="form-control"
-                                                                                        ng-model="geral.sexo">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value="m" >Masculino</option >
-                                                                                    <option value="f" >Feminino</option >
-                                                                                </select >
-                                                                            </div >
-                                                                        </div>
-                                                                        <!-- Fatores de risco -->
-                                                                        <div class="row">
-                                                                            <h1>Fatores de risco</h1>
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="velocidade" >Velocidade</label >
-                                                                                <select name="velocidade"
-                                                                                        id="velocidade"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.velocidade">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="alcoolDrogas" >Álcool/Drogas</label >
-                                                                                <select name="alcoolDrogas"
-                                                                                        id="alcoolDrogas"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.alcoolDrogas">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="infra" >Infraestrutura</label >
-                                                                                <select name="infra"
-                                                                                        id="infra"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.infra">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="veiculo" >Veículo</label >
-                                                                                <select name="veiculo"
-                                                                                        id="veiculo"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.veiculo">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="fadiga" >Fadiga</label >
-                                                                                <select name="fadiga"
-                                                                                        id="fadiga"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.fadiga">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="visibilidade" >Visibilidade</label >
-                                                                                <select name="visibilidade"
-                                                                                        id="visibilidade"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.visibilidade">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="problemasPsicologicos" >Problemas psicológicos</label >
-                                                                                <select name="problemasPsicologicos"
-                                                                                        id="problemasPsicologicos"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.problemasPsicologicos">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="celularDistracao" >Celular / distração</label >
-                                                                                <select name="celularDistracao"
-                                                                                        id="celularDistracao"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.celularDistracao">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="clima" >Condições climáticas</label >
-                                                                                <select name="clima"
-                                                                                        id="clima"
-                                                                                        class="form-control"
-                                                                                        ng-model="fatores.clima">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
+                                                                <form ng-app="form" >
+                                                                    <div class="container" ng-controller="formctrl">
 
-                                                                        </div>
+                                                                        <ul class="nav nav-tabs">
+                                                                            <li class="active"><a data-toggle="tab" href="#adress">Ocorrência</a></li>
+                                                                            <li><a data-toggle="tab" href="#stats">Dados Estatísticos</a></li>
+                                                                            <li><a data-toggle="tab" href="#vehicle">Veículo</a></li>
+                                                                            <li><a data-toggle="tab" href="#involved">Envolvido</a></li>
+                                                                        </ul>
 
-                                                                        <div class="form-group col-md-12" >
-                                                                        <label for="responsavelFatores" >Possível responsavel pelos fatores de risco</label >
-                                                                        <select name="responsavelFatores"
-                                                                        id="responsavelFatores"
-                                                                        class="form-control"
-                                                                        ng-model="fatores.responsavelFatores">
-                                                                        <option value="" >Escolha uma opção</option >
-                                                                        <option value= "condutorVeiculoLeve">Condutor Veículo Leve</option >
-                                                                        <option value= "condutorVeiculoPesado">Condutor Veículo Pesado</option >
-                                                                        <option value= "motociclistaGarupa">Motociclista/Garupa</option >
-                                                                        <option value= "motonetaGarupa">Motoneta/Garupa</option >
-                                                                        <option value= "ciclista"> Ciclista</option >
-                                                                        <option value= "condutorPassageiroVan"> Condutor/Passageiro/Van </option >
-                                                                        <option value= "pedestre"> Pedestre </option >
 
-                                                                        </select >
-                                                                        </div >
-
-                                                                        <!--<div class="row container">-->
-                                                                            <!--<h5><b>Possível responsavel pelos fatores de risco </b></h5>-->
-                                                                            <!--<div class="col-sm-4" ng-repeat="f in responsaveisFatores">-->
-                                                                                <!--<div class="action-checkbox">-->
-                                                                                    <!--<input id="{{f.name}}" type="checkbox" value="{{f.name}}" ng-checked="selection.indexOf(f.name) > -1" ng-click="toggleFatoresSelection(f.id)" />-->
-                                                                                    <!--<label for="{{f.name}}"></label>-->
-                                                                                    <!--{{f.name}}-->
-                                                                                <!--</div>-->
-                                                                            <!--</div>-->
-                                                                        <!--</div>-->
-
-                                                                        <!-- só pra conseguir comitar-->
-                                                                        <!-- Condutas de risco -->
-                                                                        <div class="row">
-                                                                            <h1>Condutas de risco</h1>
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="habilitacao" >Habilitação</label >
-                                                                                <select name="habilitacao"
-                                                                                        id="habilitacao"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.habilitacao">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="transitarLocalProibido" >Transitar em local proibido</label >
-                                                                                <select name="transitarLocalProibido"
-                                                                                        id="transitarLocalProibido"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.transitarLocalProibido">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="transitarLocalImproprio" >Transitar em local impróprio</label >
-                                                                                <select name="transitarLocalImproprio"
-                                                                                        id="transitarLocalImproprio"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.transitarLocalImproprio">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="mudancaFaixaPista" >Mudança Faixa/Pista</label >
-                                                                                <select name="mudancaFaixaPista"
-                                                                                        id="mudancaFaixaPista"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.mudancaFaixaPista">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="distanciaVeiculos" >Distância entre veículos</label >
-                                                                                <select name="distanciaVeiculos"
-                                                                                        id="distanciaVeiculos"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.distanciaVeiculos">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="desrespeitoSinalizacao" >Desrespeito a sinalização</label >
-                                                                                <select name="desrespeitoSinalizacao"
-                                                                                        id="desrespeitoSinalizacao"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.desrespeitoSinalizacao">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="darPreferencia" >Converter/Cruzar sem dar preferência</label >
-                                                                                <select name="darPreferencia"
-                                                                                        id="darPreferencia"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.darPreferencia">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="evitabilidade" >Evitabilidade/Direção defensiva</label >
-                                                                                <select name="evitabilidade"
-                                                                                        id="evitabilidade"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.evitabilidade">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="direcaoPerigosa" >Direção</label >
-                                                                                <select name="direcaoPerigosa"
-                                                                                        id="direcaoPerigosa"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.direcaoPerigosa">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="pedestreImprudente" >Imprudencia do pedestre</label >
-                                                                                <select name="pedestreImprudente"
-                                                                                        id="pedestreImprudente"
-                                                                                        class="form-control"
-                                                                                        ng-model="condutas.pedestreImprudente">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=2 >2</option >
-                                                                                    <option value=4 >4</option >
-                                                                                    <option value=6 >6</option >
-                                                                                    <option value=8 >8</option >
-                                                                                    <option value=10 >10</option >
-                                                                                </select >
-                                                                            </div >
-                                                                        </div>
-                                                                        <div class="form-group col-md-12" >
-                                                                            <label for="responsavelCondutas" >Possível responsavel pelas condutas de risco</label >
-                                                                            <select name="responsavelCondutas"
-                                                                                    id="responsavelCondutas"
-                                                                                    class="form-control"
-                                                                                    ng-model="condutas.responsavelCondutas">
-                                                                                <option value="" >Escolha uma opção</option >
-                                                                                <option value= "condutorVeiculoLeve">Condutor Veículo Leve</option >
-                                                                                <option value= "condutorVeiculoPesado">Condutor Veículo Pesado</option >
-                                                                                <option value= "motociclistaGarupa">Motociclista/Garupa</option >
-                                                                                <option value= "motonetaGarupa">Motoneta/Garupa</option >
-                                                                                <option value= "ciclista"> Ciclista</option >
-                                                                                <option value= "condutorPassageiroVan"> Condutor/Passageiro/Van </option >
-                                                                                <option value= "pedestre"> Pedestre </option >
-
-                                                                            </select >
-                                                                        </div >
-                                                                        <!-- Usuário -->
-                                                                        <div class="row">
-                                                                            <h1>Quanto ao usuário</h1>
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="capacete" >Capacete</label >
-                                                                                <select name="capacete"
-                                                                                        id="capacete"
-                                                                                        class="form-control"
-                                                                                        ng-model="usuario.capacete">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=1 >1</option >
-                                                                                    <option value=3 >3</option >
-                                                                                    <option value=5 >5</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="cinto" >Cinto</label >
-                                                                                <select name="cinto"
-                                                                                        id="cinto"
-                                                                                        class="form-control"
-                                                                                        ng-model="usuario.cinto">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=1 >1</option >
-                                                                                    <option value=3 >3</option >
-                                                                                    <option value=5 >5</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="protecaoOcupante" >Proteção do ocupante</label >
-                                                                                <select name="protecaoOcupante"
-                                                                                        id="protecaoOcupante"
-                                                                                        class="form-control"
-                                                                                        ng-model="usuario.protecaoOcupante">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=1 >1</option >
-                                                                                    <option value=3 >3</option >
-                                                                                    <option value=5 >5</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="objetosLaterais" >Objetos laterais</label >
-                                                                                <select name="objetosLaterais"
-                                                                                        id="objetosLaterais"
-                                                                                        class="form-control"
-                                                                                        ng-model="usuario.objetosLaterais">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=1 >1</option >
-                                                                                    <option value=3 >3</option >
-                                                                                    <option value=5 >5</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-4" >
-                                                                                <label for="atecaoAoTrauma" >Atenção ao trauma</label >
-                                                                                <select name="atecaoAoTrauma"
-                                                                                        id="atecaoAoTrauma"
-                                                                                        class="form-control"
-                                                                                        ng-model="usuario.atecaoAoTrauma">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value=0 >0</option >
-                                                                                    <option value=1 >1</option >
-                                                                                    <option value=3 >3</option >
-                                                                                    <option value=5 >5</option >
-                                                                                </select >
-                                                                            </div >
-                                                                        </div>
-                                                                        <!-- Outros -->
-                                                                        <div class="row">
-                                                                            <h1>Outros</h1>
-                                                                            <div class="form-group col-md-6" >
-                                                                                <label for="alcoolemia" >Alcoolemia</label >
-                                                                                <select name="alcoolemia"
-                                                                                        id="alcoolemia"
-                                                                                        class="form-control"
-                                                                                        ng-model="outros.alcoolemia">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value="sim" >Sim</option >
-                                                                                    <option value="nao" >Não</option >
-                                                                                </select >
-                                                                            </div >
-                                                                            <div class="form-group col-md-6" >
-                                                                                <label for="licenciamento" >Licenciamento</label >
-                                                                                <select name="licenciamento"
-                                                                                        id="licenciamento"
-                                                                                        class="form-control"
-                                                                                        ng-model="outros.licenciamento">
-                                                                                    <option value="" >Escolha uma opção</option >
-                                                                                    <option value="sim" >Sim</option >
-                                                                                    <option value="nao" >Não</option >
-                                                                                </select >
+                                                                        <div class="tab-content">
+                                                                            <div id="adress" class="tab-pane fade in active">
+                                                                                <h1 class="form-group col-md-12">Endereço da Ocorrência</h1>
+                                                                                <div class="form-group col-md-10">
+                                                                                    <label for="rua" >Rua</label >
+                                                                                    <input type="text"
+                                                                                           class="form-control"
+                                                                                           id="rua"
+                                                                                           ng-model="ocorrencia.rua">
+                                                                                </div >
+                                                                                <div class="form-group col-md-2" >
+                                                                                    <label for="numero" >Numero/KM</label >
+                                                                                    <input type="number" min="0"
+                                                                                           class="form-control"
+                                                                                           id="numero"
+                                                                                           ng-model="ocorrencia.numero">
+                                                                                </div >
+                                                                                <div class="form-group col-md-12" >
+                                                                                    <label for="cruzamento" >Cruzamento com</label >
+                                                                                    <input type="text"
+                                                                                           class="form-control"
+                                                                                           id="cruzamento"
+                                                                                           ng-model="ocorrencia.cruzamento">
+                                                                                </div >
+                                                                                <div class="form-group col-md-5" >
+                                                                                    <label for="bairro" >Bairro</label >
+                                                                                    <select name="bairro"
+                                                                                            id="bairro"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.bairro">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-7" >
+                                                                                    <label for="ref" >Referência</label >
+                                                                                    <input type="text"
+                                                                                           class="form-control"
+                                                                                           id="ref"
+                                                                                           ng-model="ocorrencia.ref">
+                                                                                </div >
+                                                                                <div class="form-group col-md-6" >
+                                                                                    <label for="lat" >Lat</label >
+                                                                                    <input type="number" min="0"
+                                                                                           class="form-control"
+                                                                                           id="lat"
+                                                                                           ng-model="ocorrencia.lat">
+                                                                                </div >
+                                                                                <div class="form-group col-md-6" >
+                                                                                    <label for="long" >Long</label >
+                                                                                    <input type="number" min="0"
+                                                                                           class="form-control"
+                                                                                           id="long"
+                                                                                           ng-model="ocorrencia.long">
+                                                                                </div >
                                                                             </div>
-                                                                            <!--<div class="form-group col-md-12">-->
-                                                                                <!--<h5><b>Órgãos Responsáveis pelas informações: </b></h5>-->
-                                                                                <!--<div class="col-sm-2" ng-repeat="o in orgaos">-->
-                                                                                    <!--<div class="action-checkbox">-->
-                                                                                        <!--<input id="{{o.name}}" type="checkbox" value="{{o.name}}" ng-checked="selection.indexOf(o.name) > -1" ng-click="toggleOrgaosSelection(o.id)" />-->
-                                                                                        <!--<label for="{{o.name}}"></label>-->
-                                                                                        <!--{{o.name}}-->
-                                                                                    <!--</div>-->
-                                                                                <!--</div>-->
-                                                                            <!--</div>-->
-                                                                            <div class="row form-group container">
-                                                                            <div class="col-md-2"><input type="checkbox" ng-model="orgaos.pm">PM</div>
-                                                                            <div class="col-md-2"><input type="checkbox" ng-model="orgaos.prf">PRF</div>
-                                                                            <div class="col-md-2"><input type="checkbox" ng-model="orgaos.pre">PRE</div>
-                                                                            <div class="col-md-2"><input type="checkbox" ng-model="orgaos.cettrans">CETTRANS</div>
-                                                                            <div class="col-md-2"><input type="checkbox" ng-model="orgaos.outro">Outro</div>
+                                                                            <div id="stats" class="tab-pane fade">
+                                                                                <h1 class="col-md-12">Dados Estatisticos</h1>
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="tipoAcidente" >Tipo de Acidente</label >
+                                                                                    <select name="tipoAcidente"
+                                                                                            id="tipoAcidente"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.tipoAcidente">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="tipoPavimento" >Tipo de pavimento</label >
+                                                                                    <select name="tipoPavimento"
+                                                                                            id="tipoPavimento"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.tipoPavimento">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="superficie" >Superficie</label >
+                                                                                    <select name="superficie"
+                                                                                            id="superficie"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.superficie">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="classif" >Classificação do acidente</label >
+                                                                                    <select name="classif"
+                                                                                            id="classif"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.classif">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group  col-md-3" >
+                                                                                    <label for="estadoPista" >Estado da pista</label >
+                                                                                    <select name="estadoPista"
+                                                                                            id="estadoPista"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.estadoPista">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="perfilPista" >Perfil da pista</label >
+                                                                                    <select name="perfilPista"
+                                                                                            id="perfilPista"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.perfilPista">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="condicaoPista" >Condição da pista</label >
+                                                                                    <select name="condicaoPista"
+                                                                                            id="condicaoPista"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.condicaoPista">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="condicaoClima" >Condições climaticas</label >
+                                                                                    <select name="condicaoClima"
+                                                                                            id="condicaoClima"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.condicaoClima">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="sinalVertical" >Sinalização vertical</label >
+                                                                                    <select name="sinalVertical"
+                                                                                            id="sinalVertical"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.sinalVertical">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="sinalHorizontal" >Sinalização horizontal</label >
+                                                                                    <select name="sinalHorizontal"
+                                                                                            id="sinalHorizontal"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.sinalHorizontal">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="direcao" >Direção</label >
+                                                                                    <select name="direcao"
+                                                                                            id="direcao"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.direcao">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="zona" >Zona</label >
+                                                                                    <select name="zona"
+                                                                                            id="zona"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.zona">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-3" >
+                                                                                    <label for="causaProvavel" >Causa provavel</label >
+                                                                                    <select name="causaProvavel"
+                                                                                            id="causaProvavel"
+                                                                                            class="form-control"
+                                                                                            ng-model="ocorrencia.causaProvavel">
+                                                                                        <option value="" >Escolha uma opção</option >
+                                                                                        <option value="opt1" >Opção 1</option >
+                                                                                        <option value="opt2" >Opção 2</option >
+                                                                                        <option value="optn" >...</option >
+                                                                                    </select >
+                                                                                </div >
+                                                                                <div class="form-group col-md-9" >
+                                                                                    <label for="infoAdicional" >Info. adicional</label >
+                                                                                    <input type="text-box"
+                                                                                           id="infoAdicional"
+                                                                                           class="form-control"
+                                                                                           ng-model="ocorrencia.infoAdicional">
+                                                                                </div >
+                                                                            </div>
+                                                                            <div id="vehicle" class="tab-pane fade">
+                                                                                <fieldset  data-ng-repeat="car in carArray">
+                                                                                    <h1 class="col-md-12">Veículo #1</h1>
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="placa" >Placa</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="placa"
+                                                                                               ng-model="car.placa">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-2" >
+                                                                                        <label for="estado" >Estado</label >
+                                                                                        <select name="estado"
+                                                                                                id="estado"
+                                                                                                class="form-control"
+                                                                                                ng-model="car.estado">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-2" >
+                                                                                        <label for="cidade" >Cidade</label >
+                                                                                        <select name="cidade"
+                                                                                                id="cidade"
+                                                                                                class="form-control"
+                                                                                                ng-model="car.cidade">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-2" >
+                                                                                        <label for="marca" >marca</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="marca"
+                                                                                               ng-model="car.marca">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="modelo" >Modelo</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="modelo"
+                                                                                               ng-model="car.modelo">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-12" >
+                                                                                        <label for="grauDeAvaria" >Grau de avaria</label >
+                                                                                        <select name="grauDeAvaria"
+                                                                                                id="grauDeAvaria"
+                                                                                                class="form-control"
+                                                                                                ng-model="car.grauDeAvaria">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <h3>Quanto ao condutor</h3>
+                                                                                    <div class="form-group col-md-4" >
+
+                                                                                        <label for="catHabilitacao" >Categoria da habilitação</label >
+                                                                                        <select name="catHabilitacao"
+                                                                                                id="catHabilitacao"
+                                                                                                class="form-control"
+                                                                                                ng-model="car.catHabilitacao">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-4" >
+                                                                                        <label for="primeiraHabilitacao" >Data da primeira habilitação</label >
+                                                                                        <input type="date"
+                                                                                               class="form-control"
+                                                                                               id="primeiraHabilitacao"
+                                                                                               ng-model="car.primeiraHabilitacao">
+
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-4" >
+                                                                                        <label for="vctoHabilitacao" >Vencimento da habilitação</label >
+                                                                                        <input type="date"
+                                                                                               class="form-control"
+                                                                                               id="vctoHabilitacao"
+                                                                                               ng-model="car.vctoHabilitacao">
+                                                                                    </div >
+
+
+                                                                                    <button class="col-md-1" ng-show="$last" ng-click="removeCar()"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Remover</button>
+                                                                                    <!---->
+                                                                                </fieldset>
+                                                                                <button class="col-md-1" ng-click="addNewCar()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar</button>
+                                                                            </div>
+                                                                            <div id="involved" class="tab-pane fade">
+
+                                                                                <fieldset data-ng-repeat="involved in involvedArray">
+                                                                                    <h1 class="form-group col-md-12">Envolvido #1</h1>
+                                                                                    <div class="form-group col-md-5" >
+                                                                                        <label for="nome" >Nome</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="nome"
+                                                                                               ng-model="involved.nome">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-2" >
+                                                                                        <label for="idade" >Idade</label >
+                                                                                        <input type="number " min="0"
+                                                                                               class="form-control"
+                                                                                               id="idade"
+                                                                                               ng-model="involved.idade">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-1" >
+                                                                                        <label for="sexo" >Sexo</label >
+                                                                                        <select name="sexo"
+                                                                                                id="sexo"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.sexo">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-4" >
+                                                                                        <label for="ruaEnvolvido" >Rua</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="ruaEnvolvido"
+                                                                                               ng-model="involved.ruaEnvolvido">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-1" >
+                                                                                        <label for="numeroEnvolvido" >Numero</label >
+                                                                                        <input type="number" min="0"
+                                                                                               class="form-control"
+                                                                                               id="numeroEnvolvido"
+                                                                                               ng-model="involved.numeroEnvolvido">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-11" >
+                                                                                        <label for="esquinaEnvolvido" >Esquina</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="esquinaEnvolvido"
+                                                                                               ng-model="involved.esquinaEnvolvido">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="bairroEnvolvido" >Bairro</label >
+                                                                                        <select name="bairroEnvolvido"
+                                                                                                id="bairroEnvolvido"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.bairroEnvolvido">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-9" >
+                                                                                        <label for="refEnvolvido" >Referência</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="refEnvolvido"
+                                                                                               ng-model="involved.refEnvolvido">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-12" >
+                                                                                        <label for="nomeMae" >Nome da mãe</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="nomeMae"
+                                                                                               ng-model="involved.nomeMae">
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="situacao" >Situação</label >
+                                                                                        <select name="situacao"
+                                                                                                id="situacao"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.situacao">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="tipoVeiculo" >Tipo de veículo</label >
+                                                                                        <select name="tipoVeiculo"
+                                                                                                id="tipoVeiculo"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.tipoVeiculo">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="posVeiculo" >Posição no veículo</label >
+                                                                                        <select name="posVeiculo"
+                                                                                                id="posVeiculo"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.posVeiculo">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="condSeguranca" >Condição de segurança</label >
+                                                                                        <select name="condSeguranca"
+                                                                                                id="condSeguranca"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.condSeguranca">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-3" >
+                                                                                        <label for="gravLesao" >Gravidade da lesão</label >
+                                                                                        <select name="gravLesao"
+                                                                                                id="gravLesao"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.gravLesao">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-9" >
+                                                                                        <label for="condProvavel" >conduta provavel</label >
+                                                                                        <select name="condProvavel"
+                                                                                                id="condProvavel"
+                                                                                                class="form-control"
+                                                                                                ng-model="involved.condProvavel">
+                                                                                            <option value="" >Escolha uma opção</option >
+                                                                                            <option value="opt1" >Opção 1</option >
+                                                                                            <option value="opt2" >Opção 2</option >
+                                                                                            <option value="optn" >...</option >
+                                                                                        </select >
+                                                                                    </div >
+                                                                                    <div class="form-group col-md-12" >
+                                                                                        <label for="evolucao" >Evolução</label >
+                                                                                        <input type="text"
+                                                                                               class="form-control"
+                                                                                               id="evolucao"
+                                                                                               ng-model="involved.evolucao">
+                                                                                    </div >
+                                                                                    <button class="col-md-1" ng-show="$last" ng-click="removeInvolved()"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span>Remover</button>
+                                                                                </fieldset>
+                                                                                <button class="col-md-1" ng-click="addNewInvolved()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Adicionar</button>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="row">
-                                                                            <h1>Quanto a causa do acidente</h1>
-                                                                            <div class="form-group col-md-12">
-                                                                                <label for="infoAdicional" >Descritivo de possivel causa</label >
-                                                                                <input type="text"
-                                                                                       class="form-control"
-                                                                                       id="infoAdicional"
-                                                                                       ng-model="causa.infoAdicional">
-                                                                            </div >
-                                                                        </div>
-                                                                        <!--<div class="row container">-->
-                                                                            <!--<h5><b>Principais causas avaliadas: </b></h5>-->
-                                                                            <!--<div class="col-sm-6" ng-repeat="c in causa">-->
-                                                                                <!--<div class="action-checkbox">-->
-                                                                                    <!--<input id="{{c.name}}" type="checkbox" value="{{c.name}}" ng-checked="selection.indexOf(c.name) > -1" ng-click="toggleCausaSelection(c.id)" />-->
-                                                                                    <!--<label for="{{c.name}}"></label>-->
-                                                                                    <!--{{c.name}}-->
-                                                                                <!--</div>-->
-                                                                            <!--</div>-->
-                                                                        <!--</div>-->
-                                                                        <div class="row form-group container">
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.velocidade">Excesso de velocidade</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.alcoolDrogas">Uso de álcool/drogas</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.imprudenciaCondutor">Imprudência do Condutor</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.impericiaCondutor">Imperícia do Condutor</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.psicologico">Problemas psicológicos</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.imprudenciaPedestre">Imprudência do pedestre</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.problemasVeiculo">Problemas do veículo</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.infraestrutura">Problemas na infraestrutura ou via</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.clima">Condições climáticas e visibilidade</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.fadigaDistracao">Fadiga ou distração</div>
-                                                                        <div class="col-md-2"><input type="checkbox" ng-model="causa.outro">Outro</div>
-                                                                        </div>
-                                                                        <!--<div class="form-group">-->
-                                                                            <!--<button class="btn btn-primary" ng-click="submit()">Registrar-->
-                                                                            <!--</button>-->
-                                                                        <!--</div>-->
 
+
+                                                                        <!---->
                                                                     </div>
-                                                                </form>
-
+                                                                </form >
                                                                 <!--/corpo do modal-->
                                                             </div>
                                                             <div class="modal-footer">
