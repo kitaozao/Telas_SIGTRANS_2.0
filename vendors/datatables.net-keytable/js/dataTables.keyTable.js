@@ -495,7 +495,6 @@ $.extend( KeyTable.prototype, {
 		if ( ! cell ) {
 			return;
 		}
-
 		var that = this;
 		var dt = this.s.dt;
 
