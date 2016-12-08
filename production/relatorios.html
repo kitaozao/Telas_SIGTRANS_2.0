@@ -18,8 +18,11 @@
 	<link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
 	<!-- jVectorMap -->
 	<link href="css/maps/jquery-jvectormap-2.0.3.css" rel="stylesheet"/>
+	<!-- Select2 -->
+	<link href="../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
 	<!-- Custom Theme Style -->
 	<link href="../build/css/custom.min.css" rel="stylesheet">
+
 </head>
 
 <body class="nav-md" >
@@ -48,8 +51,8 @@
 
 							<li><a><i class="fa fa-plus-square"></i> Obitos <span class="fa fa-chevron-down"></span></a>
 								<ul class="nav child_menu">
-									<li><a href="#">Analises Completas</a></li>
-									<li><a href="#">Analises Incompletas</a></li>
+									<li><a href="obitos.html">Analises Completas</a></li>
+									<li><a href="obitos.html">Analises Incompletas</a></li>
 								</ul>
 							</li>
 
@@ -64,10 +67,12 @@
 					</div>
 
 				</div>
-				<!-- /sidebar menu-->
+				<!-- /sidebar menu  -->
+
 				<!-- /menu footer buttons -->
 				<div class="sidebar-footer hidden-small"></div>
 				<!-- /menu footer buttons -->
+
 			</div>
 		</div>
 
@@ -114,7 +119,7 @@
 					<!-- line graph -->
 					<div class="x_panel">
 						<div class="x_title">
-							<h2>Acidentes <small>Por ano</small></h2>
+							<h2>Acidentes <small>Por mês</small></h2>
 							<ul class="nav navbar-right panel_toolbox">
 								<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 								</li>
@@ -161,9 +166,11 @@
 							</ul>
 							<div class="clearfix"></div>
 						</div>
-						<div class="x_content">
 
-							<div class="col-md-12 col-sm-6 col-xs-12">
+						<div class="x_content">
+							<br />
+							<!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+
 								<!-- Smart Wizard -->
 								<div id="wizard" class="form_wizard wizard_horizontal">
 									<ul class="wizard_steps">
@@ -204,12 +211,14 @@
 											</a>
 										</li>
 									</ul>
+									<div class="clearfix"></div>
+
 									<div id="step-1">
 										<h2 class="StepTitle"></h2>
 										<form class="form-horizontal form-label-left">
 											<div class="form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="reportrange">Periodo <span class="required">*</span></label>
-												<div class="col-md-6 col-sm- col-xs-12">
+												<div class="col-md-6 col-sm-6 col-xs-12">
 													<div id="reportrange" class="pull-right col-md-9 col-sm-9 col-xs-12" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
 														<span></span>
 														<i class="glyphicon glyphicon-calendar fa fa-calendar pull-right"><b class="caret"></b></i>
@@ -217,12 +226,11 @@
 												</div>
 											</div>
 										</form>
-										<div class="clearfix"></div>
 									</div>
 									<div id="step-2">
 										<h2 class="StepTitle"></h2>
 										<form class="form-horizontal form-label-left">
-											<div class="form-group">
+											<div class="form-group col-lg-12">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="reportType">Tipo do Relatorio <span class="required">*</span></label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<select class="form-control input-sm col-lg-3 user-success" id="reportType" name="reportType" >
@@ -244,39 +252,46 @@
 										<h2 class="StepTitle"></h2>
 										<form class="form-horizontal form-label-left">
 											<div class="form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Multiple</label>
-												<div class="col-md-9 col-sm-9 col-xs-12">
-													<select class="select2_multiple form-control" multiple="multiple">
-														<option>Choose option</option>
-														<option>Option one</option>
-														<option>Option two</option>
-														<option>Option three</option>
-														<option>Option four</option>
-														<option>Option five</option>
-														<option>Option six</option>
+												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="graphSelect">Tipo dos Gráficos <span class="required">*</span></label>
+												<div class="col-md-6 col-sm-6 col-xs-12">
+													<select class="select2_multiple" id="graphSelect" name="graphSelect" multiple="multiple">
+														<option value="barras">Barras</option>
+														<option value="pizza">Pizza</option>
 													</select>
 												</div>
 											</div>
 										</form>
 									</div>
 									<div id="step-4">
-										<h2 class="StepTitle">Passo 4</h2>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										</p>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-											in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										</p>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-											in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										</p>
-									</div>
+										<h2 class="StepTitle"></h2>
+										<form class="form-horizontal form-label-left pull-left">
+											<div class="form-group ">
+												<label class="control-label col-md-6 col-sm-6 col-xs-12">Periodo</label>
+												<div class="col-md-6 col-sm-6 col-xs-12" id="reportrangeShow">
+													<!--<input id="reportrangeShow" type="text" class="form-control" readonly="readonly" placeholder="Periodo">-->
+													<!--<p id="reportrangeShow" class="form-control"></p>-->
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-6 col-sm-6 col-xs-12">Tipo do Relatório</label>
+												<div class="col-md-6 col-sm-6 col-xs-12" id="reportTypeShow">
+													<!--<input type="text" class="form-control" readonly="readonly" placeholder="Tipos">-->
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-6 col-sm-6 col-xs-12">Tipo dos Gráficos</label>
+												<div class="col-md-6 col-sm-6 col-xs-12" id="graphSelectShow">
+													<!--<input type="text" class="form-control" readonly="readonly" placeholder="Tipos">-->
+												</div>
 
+											</div>
+										</form>
+									</div>
+									<div class="clearfix"></div>
 								</div>
 								<!-- End SmartWizard Content -->
-							</div>
+
+							<!--</div>-->
 						</div>
 					</div>
 					<!-- /wizard -->
@@ -352,21 +367,32 @@
 <!-- morris.js -->
 <script>
 	$(document).ready(function() {
+		var months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+
 		Morris.Line({
 			element: 'graph_line',
-			xkey: 'year',
-			ykeys: ['value'],
-			labels: ['Valor'],
+			xkey: 'month',
+			xLabelFormat: function (x) { return months[x.getMonth()]; },
+			ykeys: ['value', 'value2', 'value3'],
+			labels: ['2014', '2015', '2016'],
 			hideHover: 'auto',
-			lineColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+			lineColors: ['#26B99A', '#34495E', '#3498DB', '#ACADAC'],
 			data: [
-				{year: '2012', value: 200},
-				{year: '2013', value: 150},
-				{year: '2014', value: 150},
-				{year: '2015', value: 100},
-				{year: '2016', value: 125}
+				{month: "2016-01",	value: 200,	value2: 150,	value3: 192},
+				{month: "2016-02",	value: 150,	value2: 100,	value3: 178},
+				{month: "2016-03",	value: 150,	value2: 160,	value3: 214},
+				{month: "2016-04",	value: 100,	value2: 200,	value3: 247},
+				{month: "2016-05",	value: 125,	value2: 225,	value3: 230},
+				{month: "2016-06",	value: 180,	value2: 130,	value3: 162},
+				{month: "2016-07",	value: 150,	value2: 200,	value3: 236},
+				{month: "2016-08",	value: 133,	value2: 120,	value3: 210},
+				{month: "2016-09",	value: 180,	value2: 100,	value3: 224},
+				{month: "2016-10",	value: 100,	value2: 160,	value3: 208},
+				{month: "2016-11",	value: 241,	value2: 230,	value3: 155},
+				{month: "2016-12",	value: 150,	value2: 120,	value3: 230}
 			],
 			resize: true
+
 		});
 
 		$MENU_TOGGLE.on('click', function() {
@@ -379,15 +405,40 @@
 <!-- jQuery Smart Wizard -->
 <script>
 	$(document).ready(function() {
-		$('#wizard').smartWizard();
-
-		$('#wizard_verticle').smartWizard({
-			transitionEffect: 'slide'
+		$('#wizard').smartWizard({
+            onFinish: onFinishCallback,
+            onLeaveStep: leaveAStepCallback
 		});
 
-		$('.buttonNext').addClass('btn btn-success');
+		$('#wizard_verticle').smartWizard({
+            transitionEffect: 'slide'
+		});
+
+        $('.buttonNext').addClass('btn btn-success');
 		$('.buttonPrevious').addClass('btn btn-primary');
 		$('.buttonFinish').addClass('btn btn-default');
+
+		function onFinishCallback() {
+            window.location.href='relatorio_gerado.html';
+        }
+        function leaveAStepCallback() {
+           var div_content_1 = document.getElementById('reportrange');
+           var div_content_2 = document.getElementById('reportType');
+           var div_content_3 = document.getElementById('graphSelect');
+           var div_content_1_2 = document.getElementById('reportrangeShow');
+           var div_content_2_2 = document.getElementById('reportTypeShow');
+
+
+           div_content_1_2.innerText=div_content_1.innerText;
+           div_content_2_2.innerHTML=div_content_2.options[div_content_2.selectedIndex].text;
+
+           return true;
+        }
+        $('#graphSelect').change(function(){
+            var arr = $(this).val();
+            var div_content_3_2 = document.getElementById('graphSelectShow');
+            div_content_3_2.innerText=arr;
+        })
 	});
 </script>
 <!-- /jQuery Smart Wizard -->
@@ -408,6 +459,7 @@
 //			dateLimit: {
 //				days: 60
 //			},
+			width: "100%",
 			showDropdowns: true,
 //			showWeekNumbers: true,
 //			weekLabel: 'S',
@@ -485,14 +537,15 @@
 <!-- Select2 -->
 <script>
 	$(document).ready(function() {
-		$(".select2_single").select2({
-			placeholder: "Select a state",
-			allowClear: true
-		});
-		$(".select2_group").select2({});
+//		$(".select2_single").select2({
+//			placeholder: "Select a state",
+//			allowClear: true
+//		});
+//		$(".select2_group").select2({});
 		$(".select2_multiple").select2({
-			maximumSelectionLength: 4,
-			placeholder: "With Max Selection limit 4",
+//			minimumInputLength: 1,
+			width: "100%",
+//			placeholder: "Escolha pelo menos um",
 			allowClear: true
 		});
 	});

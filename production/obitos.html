@@ -23,10 +23,10 @@
     <link href="../build/css/custom.min.css" rel="stylesheet">
 </head>
 
-<body class="nav-md menu_fixed" >
+<body class="nav-md" >
 <div class="container body">
     <div class="main_container">
-        <div class="col-md-3 left_col">
+        <div class="col-md-3 left_col menu_fixed">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
                     <a href="index.html" class="site_title"><i class="fa fa-road"></i> <span>Sigtrans</span></a>
@@ -65,6 +65,11 @@
                     </div>
 
                 </div>
+                <!-- /sidebar menu  -->
+
+                <!-- /menu footer buttons -->
+                <div class="sidebar-footer hidden-small"></div>
+                <!-- /menu footer buttons -->
 
             </div>
         </div>
@@ -830,9 +835,6 @@
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLjQDEPz7qYcfTrevxLBT0ko25vBJbu20&callback=initMap">
-</script>
 <script>
     $(document).ready(function() {
         var handleDataTableButtons = function() {
