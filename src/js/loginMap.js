@@ -95,7 +95,6 @@ function addMarkers(points,imagem,markers) {
             position: {lat: point[1], lng: point[2]},
             draggable:false,
             icon : imagem,
-            title: point[0],
             setDraggable: false
         });
 
