@@ -114,7 +114,7 @@ function initMap(){
         data: getPoints(),
         map: map
     });
-
+    heatmap.set('radius', heatmap.get('radius') ? null : 20);
     function getPoints() {
         return [
             //14 Novembro
@@ -182,6 +182,15 @@ function initMap(){
             new google.maps.LatLng(-24.982957, -53.443843),
             new google.maps.LatLng(-24.970933, -53.442863),
             new google.maps.LatLng(-24.965564, -53.449987),
+            new google.maps.LatLng(-24.993976, -53.460323),
+            new google.maps.LatLng(-24.992053, -53.463883),
+            new google.maps.LatLng(-24.993152, -53.466029),
+            new google.maps.LatLng(-24.989748, -53.464988),
+            new google.maps.LatLng(-24.992062, -53.469183),
+            new google.maps.LatLng(-24.995699, -53.467488),
+            new google.maps.LatLng(-24.997537, -53.462166),
+
+
             new google.maps.LatLng(-24.994340000000000,-53.478789999999800),
             new google.maps.LatLng(-24.987040000000000,-53.477409999999900),
             new google.maps.LatLng(-24.991330000000000,-53.479869999999800),
